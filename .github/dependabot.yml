@@ -1,0 +1,27 @@
+version: 2
+
+updates:
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "sunday"
+    groups:
+      all-github-actions:
+        patterns:
+          - "*"
+    cooldown:
+      default-days: 7
+
+
+  - package-ecosystem: npm
+    directory: "web"
+    schedule:
+      interval: weekly
+      day: sunday
+    groups:
+      all-npm:
+        patterns:
+          - "*"
+    cooldown:
+      default-days: 7
